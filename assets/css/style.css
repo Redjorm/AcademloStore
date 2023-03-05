@@ -1,0 +1,91 @@
+@import"https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap";
+
+:root {
+    --primaryColor: hsl(354, 78%, 60%);
+    --buttonColor: hsl(0, 0%, 17%);
+    --buttonColorHover: hsl(0, 0%, 21%);
+    --cardColor: hsl(0, 0%, 90%);
+    --titleColor: hsl(0, 0%, 15%);
+    --textColor: hsl(0, 0%, 35%);
+    --textColorLight: hsl(0, 0%, 55%);
+    --bodyColor: hsl(206, 4%, 97%);
+    --containerColor: hsl(0, 0%, 100%);
+    --borderColor: hsl(0, 0%, 94%);
+}
+
+body.dark-theme {
+    --primaryColor: hsl(182, 53%, 74%);
+    --buttonColor: : hsl(246, 16%, 12%);
+    --buttonColorHover: hsl(0, 0%, 28%);
+    --cardColor: hsla(246, 16%, 5%);
+    --titleColor: hsl(0, 0%, 95%);
+    --textColor: hsl(0, 0%, 75%);
+    --bodyColor: hsl(249, 19%, 14%);
+    --containerColor: hsl(246, 16%, 12%);
+    --borderColor: hsl(0, 0%, 20%)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body {
+    background-color: var(--bodyColor);
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto
+}
+
+.header {
+    padding: 0 1rem
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0.6rem;
+}
+
+.navbar__ul li {
+    font-size: 1.5rem;
+    color: var(--titleColor)
+}
+
+.navbar__icon {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+}
