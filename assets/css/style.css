@@ -32,8 +32,30 @@ body.dark-theme {
     font-family: 'Roboto';
 }
 
-body {
-    background-color: var(--bodyColor);
+body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: var(--containerColor);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--primaryColor);
+    border-radius: 8px;
+}
+
+/* ---------------- GLOBAL ----------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    color: inherit;
 }
 
 img {
@@ -41,51 +63,104 @@ img {
     display: block;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
 .container {
     max-width: 1024px;
-    margin: auto
+    margin: auto;
+
 }
 
+
+
+/* ----------------- NAVBAR ---------------------- */
 .header {
-    padding: 0 1rem
+    background-color: transparent;
+    height: 3rem;
+    padding: 0 1rem;
+    position: fixed;
+    width: 100%;
 }
 
 .navbar {
-    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0rem 1rem;
 }
 
+
+
 .logo {
-    background-color: red;
     display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+.logo span {
+    font-weight: 550;
+    color: var(--titleColor);
+}
+
+.logo svg {
+    width: 40px;
+    fill: var(--primaryColor)
 }
 
 .navbar__ul {
     display: flex;
     flex-direction: row;
-    gap: 0.6rem;
+    gap: 0.8rem;
 }
 
 .navbar__ul li {
     font-size: 1.5rem;
-    color: var(--titleColor)
+    color: var(--title-color)
 }
 
 .navbar__icon {
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: var(--title-color);
+    user-select: none;
     display: flex;
-    align-items: center;
-    gap: 0.6rem;
+    gap: .5rem
+}
 
+#iconShowCart {
+    position: relative;
+}
+
+.productsInCart {
+    position: absolute;
+    top: 12px;
+    right: -5px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--titleColor);
+    color: var(--cardColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+    border-radius: 50%;
+    font-weight: bold
+}
+
+/* ------------- MAIN ------------ */
+
+.main {
+    padding: 0rem 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem
+}
+
+.presentation_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentation_header_img {
+    background-color: var(--primaryColor);
 }

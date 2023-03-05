@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" type="image/svg+xml" href="./assets/images/icon.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Academlo Store</title>
 </head>
 
@@ -13,28 +15,31 @@
     <div class="container">
         <header class="header">
             <nav class="navbar">
-                <a href="" class="logo">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="nav_logo-icon">
-                        <title>Academlo Logo</title>
-                        <g>
+                <div class="logo">
+                    <a href="" class="a__logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="nav_logo-icon">
+                            <title>Academlo Logo</title>
                             <g>
-                                <path
-                                    d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
-                                </path>
+                                <g>
+                                    <path
+                                        d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                                    </path>
+                                </g>
                             </g>
-                        </g>
-                    </svg>
-                    <span>STORE</span>
-                </a>
+                        </svg>
+                    </a>
+                    <span>Store</span>
+                </div>
                 <ul class="navbar__ul">
                     <li> <a href="">Home</a> </li>
                     <li> <a href="">Products</a> </li>
                 </ul>
                 <div class="navbar__icon">
-                    <p>DARKMODE</p>
-                    <p>CART</p>
-                    <p>MENU</p>
+                    <i class="bx bx-moon" id="iconTheme"></i>
+                    <i class="bx bx-shopping-bag" id="iconShowCart">
+                        <div class="productsInCart"><span>0</span></div>
+                    </i>
+                    <i class="bx bxs-dashboard handleIconNavbar"></i>
                 </div>
             </nav>
         </header>
@@ -46,7 +51,7 @@
                         <p>ESTOY VACIO COMO TU CABEZA</p>
                     </div>
                     <div class="presentation_header_img">
-                        <p>SOY UNA IMAGEN</p>
+                        <img src="./assets/images/sweater2.png" alt="">
                     </div>
                 </div>
                 <div class="presentation_body">
@@ -90,6 +95,8 @@
                 </div>
             </div>
         </main>
+
+
 
         <footer class="footer">
             <div class="footer_content">
