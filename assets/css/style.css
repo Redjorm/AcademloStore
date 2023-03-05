@@ -69,22 +69,20 @@ img {
 
 }
 
-
-
 /* ----------------- NAVBAR ---------------------- */
 .header {
-    background-color: transparent;
-    height: 3rem;
-    padding: 0 1rem;
     position: fixed;
     width: 100%;
+    max-width: 1024px;
 }
 
 .navbar {
+    width: 100%;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem 1rem;
+    padding: 0rem 1rem 0rem 2rem;
 }
 
 
@@ -148,7 +146,7 @@ img {
 /* ------------- MAIN ------------ */
 
 .main {
-    padding: 0rem 2rem 1rem 2rem;
+    padding: 0rem 0rem 0rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 1.2rem
@@ -157,10 +155,54 @@ img {
 .presentation_header {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
 .presentation_header_img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
     background-color: var(--primaryColor);
+}
+
+
+.presentation_header_img img {
+    width: 250px;
+}
+
+.presentation_body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.presentation_body h2 {
+    width: 60%;
+    font-size: 28px;
+    color: var(--titleColor);
+}
+
+.presentation_body_description {
+    width: 90%;
+    color: var(--textColorLight);
+}
+
+.presentation_body_price {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--primaryColor);
+}
+
+.presentation_body a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 50px;
+    font-weight: 600;
+    color: var(--cardColor);
+    background-color: var(--buttonColor);
 }
