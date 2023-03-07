@@ -21,6 +21,14 @@ function menu () {
   })
 }
 
+function darkMode () {
+  const moonIconHTML = document.querySelector('.bx-moon')
+  const bodyHTML = document.querySelector('body')
+  moonIconHTML.addEventListener('click', function () {
+    bodyHTML.classList.toggle('dark-theme')
+  })
+}
+
 async function getProducts () {
   try {
     const data = await fetch('https://ecommercebackend.fundamentos-29.repl.co/')
@@ -59,6 +67,10 @@ function printProducts (db) {
 }
 
 async function main () {
+  menu()
+
+  darkMode()
+
   const db = {
     products:
       JSON.parse(window.localStorage.getItem('products')) ||
@@ -67,8 +79,6 @@ async function main () {
   }
 
   printProducts(db)
-
-  menu()
 }
 
 main()

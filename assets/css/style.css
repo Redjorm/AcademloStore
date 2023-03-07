@@ -15,7 +15,7 @@
 
 body.dark-theme {
     --primaryColor: hsl(182, 53%, 74%);
-    --buttonColor: : hsl(246, 16%, 12%);
+    --buttonColor: hsl(246, 16%, 12%);
     --buttonColorHover: hsl(0, 0%, 28%);
     --cardColor: hsla(246, 16%, 5%);
     --titleColor: hsl(0, 0%, 95%);
@@ -49,6 +49,9 @@ body::-webkit-scrollbar-thumb {
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
     background-color: var(--bodyColor);
 }
 
@@ -199,7 +202,7 @@ img {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 448px;
+    height: 50vh;
     background-color: var(--primaryColor);
 }
 
@@ -241,7 +244,7 @@ img {
     height: 54px;
     font-size: 18px;
     font-weight: bold;
-    color: var(--cardColor);
+    color: white;
     background-color: var(--buttonColor);
 }
 
@@ -306,6 +309,7 @@ img {
 
 .product_item_info {
     background-color: var(--containerColor);
+    color: var(--titleColor);
     height: 100px;
     padding: 1rem;
     border-radius: 0rem 0rem 1rem 1rem;
@@ -316,7 +320,7 @@ img {
 
 /* todo<--------------------------------------- FOOTER ---------------------------------------> */
 .footer {
-    background-color: var(--borderColor);
+    background-color: var(--cardColor);
 }
 
 .footer_content {
