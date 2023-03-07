@@ -24,9 +24,27 @@ function menu () {
 function darkMode () {
   const moonIconHTML = document.querySelector('.bx-moon')
   const bodyHTML = document.querySelector('body')
+
   moonIconHTML.addEventListener('click', function () {
     bodyHTML.classList.toggle('dark-theme')
+
+    console.log(document.body.classList.contains('dark-theme'))
+
+    if (document.body.classList.contains('dark-theme')) {
+      localStorage.setItem('dark-mode', 'true')
+    } else {
+      localStorage.setItem('dark-mode', 'false')
+    }
   })
+}
+
+function saveDarkMode () {
+  const bodyHTML = document.querySelector('body')
+  if (localStorage.getItem('dark-mode') === 'true') {
+    bodyHTML.classList.add('dark-theme')
+  } else {
+    bodyHTML.classList.remove('dark-theme')
+  }
 }
 
 async function getProducts () {
@@ -70,6 +88,7 @@ async function main () {
   menu()
 
   darkMode()
+  saveDarkMode()
 
   const db = {
     products:
