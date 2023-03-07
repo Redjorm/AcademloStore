@@ -1,3 +1,26 @@
+function menu () {
+  const iconMenuHTML = document.querySelector('.bxs-dashboard')
+  const headerHTML = document.querySelector('.header')
+  const navbarUlHTML = document.querySelector('.navbar__ul')
+  const logoHTML = document.querySelector('.logo')
+  const moonIconHTML = document.querySelector('.bx-moon')
+
+  iconMenuHTML.addEventListener('click', function () {
+    navbarUlHTML.classList.toggle('navbar_ul_show')
+    headerHTML.classList.toggle('header_show')
+    logoHTML.classList.toggle('logo_show')
+    moonIconHTML.classList.toggle('logo_show')
+  })
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 250) {
+      headerHTML.classList.add('header_active')
+    } else {
+      headerHTML.classList.remove('header_active')
+    }
+  })
+}
+
 async function getProducts () {
   try {
     const data = await fetch('https://ecommercebackend.fundamentos-29.repl.co/')
@@ -44,6 +67,8 @@ async function main () {
   }
 
   printProducts(db)
+
+  menu()
 }
 
 main()

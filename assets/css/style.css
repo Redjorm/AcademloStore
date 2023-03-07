@@ -61,27 +61,24 @@ img {
     display: block;
 }
 
-.container {
-    max-width: 1024px;
-    margin: auto;
-
-}
 
 /* * <---------------------------------------> NAVBAR <---------------------------------------> */
 .header {
     background-color: transparent;
     position: fixed;
     width: 100%;
-    max-width: 1024px;
+    height: 40px;
+    transition: background-color 0.5s, height 0.5s;
 }
 
 .navbar {
-    width: 100%;
+    max-width: 1024px;
+    margin: auto;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem 2rem 0rem 1.5rem;
+    padding: 0rem 2.8rem 0rem 2.8rem;
 }
 
 .logo {
@@ -101,9 +98,40 @@ img {
 }
 
 .navbar__ul {
+    position: fixed;
+    background-color: var(--bodyColor);
+    top: 40px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 0.8rem;
+    left: 100%;
+    width: 100%;
+    height: calc(100% - 40px);
+    transition: left 0.5s;
+}
+
+
+
+.header_active {
+    background-color: var(--bodyColor);
+    height: 60px;
+    box-shadow: 2px 12px 8px -3px rgba(0, 0, 0, 0.11);
+    -webkit-box-shadow: 2px 12px 8px -3px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 2px 12px 8px -3px rgba(0, 0, 0, 0.11);
+}
+
+.navbar_ul_show {
+    left: 0;
+}
+
+.logo_show {
+    visibility: hidden;
+}
+
+.header_show {
+    background-color: var(--bodyColor);
 }
 
 .navbar__ul li {
@@ -141,8 +169,18 @@ img {
 }
 
 /* *<---------------------------------------> MAIN <---------------------------------------> */
+.main {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.vacio {
+    width: 50%;
+}
+
 
 .presentation {
+
     padding: 0rem 0rem 0rem 2rem;
     display: flex;
     flex-direction: column;
@@ -157,6 +195,7 @@ img {
 }
 
 .presentation_header_img {
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: center;
