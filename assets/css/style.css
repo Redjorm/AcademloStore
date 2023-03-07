@@ -305,6 +305,17 @@ img {
 
 .product_item_img {
     padding: 1rem;
+
+}
+
+.product_item_img img {
+    transition: transform 0.5s;
+
+}
+
+.product_item_img img:hover {
+    transform: translate(0, -15px);
+
 }
 
 .product_item_info {
