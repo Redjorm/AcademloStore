@@ -71,6 +71,7 @@ img {
     position: fixed;
     width: 100%;
     height: 40px;
+    z-index: 2000;
     transition: background-color 0.5s, height 0.5s;
 }
 
@@ -310,6 +311,7 @@ img {
 
 .product_item_img img {
     transition: transform 0.5s;
+    z-index: 1000;
 
 }
 
