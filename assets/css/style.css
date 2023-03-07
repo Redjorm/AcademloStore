@@ -67,6 +67,7 @@ img {
 .container {
     max-width: 1024px;
     margin: auto;
+    background-color: var(--bodyColor);
 }
 
 /* * <---------------------------------------> NAVBAR <---------------------------------------> */
@@ -74,6 +75,7 @@ img {
     background-color: transparent;
     position: fixed;
     width: 100%;
+    max-width: 1024px;
 }
 
 .navbar {
@@ -82,6 +84,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0rem 2rem 0rem 1.5rem;
 }
 
 .logo {
@@ -142,7 +145,7 @@ img {
 
 /* *<---------------------------------------> MAIN <---------------------------------------> */
 
-.main {
+.presentation {
     padding: 0rem 0rem 0rem 2rem;
     display: flex;
     flex-direction: column;
@@ -208,7 +211,7 @@ img {
 }
 
 
-/*! <--------------------------------------- PRODUCTS ---------------------------------------> */
+/*! <--------------------------------------- filter ---------------------------------------> */
 .products_filter {
     padding: 4rem;
     display: flex;
@@ -244,6 +247,33 @@ img {
 .filter_subtitle {
     font-size: 12px;
     color: var(--textColorLight);
+}
+
+/*! <--------------------------------------- products ---------------------------------------> */
+.products_items {
+    padding: 4rem;
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.product_item {
+    background-color: var(--cardColor);
+    border-radius: 1rem;
+
+}
+
+.product_item_img {
+    padding: 1rem;
+}
+
+.product_item_info {
+    background-color: var(--containerColor);
+    height: 100px;
+    padding: 1rem;
+    border-radius: 0rem 0rem 1rem 1rem;
 }
 
 
